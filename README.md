@@ -19,7 +19,7 @@ The **ft_list** project focuses on creating and manipulating linked lists in C. 
 
 ### Features
 
-- Creation and initialization of linked lists.
+- Creation and initialisation of linked lists.
 - Adding elements to the head or tail of the list.
 - Traversing and modifying list elements.
 - Deleting elements from the list.
@@ -48,7 +48,7 @@ The **ft_list** functions work with a custom `t_list` structure that represents 
 
 ### Key Steps:
 
-1. **Initialization**: Create a new list or node.
+1. **Initialisation**: Create a new list or node.
 2. **Adding Elements**: Append or prepend elements to the list.
 3. **Traversing**: Iterate through the list to perform operations.
 4. **Deletion**: Remove nodes from the list, freeing memory.
@@ -61,21 +61,42 @@ The **ft_list** functions work with a custom `t_list` structure that represents 
    ```c
    #include "ft_list.h"
    ```
-2. Use the provided functions:void	ft_lstiter(t_list *lst, void (*f)(void*));
+2. Use the provided functions:
+```c
+void	ft_lstiter(t_list *lst, void (*f)(void*));
+```
+```c
 void	ft_lstadd_back(t_list **lst, t_list *new);
+```
+```c
 void	ft_lstadd_front(t_list **lst, t_list *new);
+```
+```c
 void	ft_lstclear(t_list **lst, void (*del)(void*));
+```
+```c
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
-
+```
+```c
 t_list	*ft_lstlast(t_list *lst);
+```
+```c
 t_list	*ft_lstnew(void *content);
+```
+```c
 t_list *ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *));
-   ```c
-   t_list *list = ft_list_create_node(data);
-   ft_list_add_front(&list, new_data);
-   ft_list_traverse(list, print_function);
-   ft_list_clear(&list);
-   ```
+```c
+t_list *list = ft_list_create_node(data);
+```
+```c
+ft_list_add_front(&list, new_data);
+```
+```c
+ft_list_traverse(list, print_function);
+```
+```c
+ft_list_clear(&list);
+```
 3. Compile using the provided Makefile:
    ```bash
    make
