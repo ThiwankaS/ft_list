@@ -85,6 +85,7 @@ t_list	*ft_lstnew(void *content);
 ```
 ```c
 t_list *ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *));
+```
 ```c
 t_list *list = ft_list_create_node(data);
 ```
@@ -98,10 +99,9 @@ ft_list_traverse(list, print_function);
 ft_list_clear(&list);
 ```
 3. Compile using the provided Makefile:
-   ```bash
+   ```c
    make
    ```
-
 ---
 
 ## Flowcharts for Functions
